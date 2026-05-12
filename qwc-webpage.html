@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qelat Web Craft | Hawler, Digitized</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1A2A3A',
+                        terracotta: '#C35C3A',
+                        gold: '#D4A351',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(26, 42, 58, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 163, 81, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #D4A351, #C35C3A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .citadel-pattern {
+            background-image: radial-gradient(#D4A351 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(195, 92, 58, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-navy text-slate-100 font-sans selection:bg-gold selection:text-navy">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gold rounded-lg flex items-center justify-center transform rotate-45 border-2 border-terracotta">
+                    <span class="text-navy font-bold -rotate-45 text-xl">Q</span>
+                </div>
+                <span class="text-xl font-bold tracking-tighter text-white">QELAT <span class="text-gold">WEB CRAFT</span></span>
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#about" class="hover:text-gold transition-colors">Philosophy</a>
+                <a href="#careers" class="hover:text-gold transition-colors">Careers</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+                <a href="#contact" class="bg-terracotta text-white px-6 py-2.5 rounded-full btn-hover">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 text-gold" id="mobile-menu-btn">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy border-b border-gold/20 px-6 py-8 space-y-4">
+            <a href="#about" class="block text-lg hover:text-gold">Philosophy</a>
+            <a href="#careers" class="block text-lg hover:text-gold">Careers</a>
+            <a href="#contact" class="block text-lg hover:text-gold">Contact</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="absolute inset-0 citadel-pattern pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-gold/30 bg-gold/5 text-gold text-xs font-bold uppercase tracking-[0.2em]">
+                Crafting the Digital Silk Road
+            </div>
+            <h1 class="text-6xl md:text-8xl font-serif font-bold leading-tight mb-8">
+                Hawler, <br>
+                <span class="text-gradient">digitized.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
+                We blend the timeless precision of Kurdish craftsmanship with modern digital engineering. Building high-performance web solutions for the businesses shaping Erbil’s future.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center md:justify-start">
+                <a href="#contact" class="px-10 py-5 bg-terracotta text-white rounded-xl font-bold text-lg btn-hover flex items-center justify-center">
+                    Start a Project
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="#about" class="px-10 py-5 border border-gold/50 text-gold rounded-xl font-bold text-lg btn-hover flex items-center justify-center">
+                    Our Philosophy
+                </a>
+            </div>
+        </div>
+        <!-- Decorative Floating Pixel -->
+        <div class="absolute top-1/4 right-10 w-24 h-24 bg-terracotta/20 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-10 left-1/4 w-32 h-32 bg-gold/10 blur-3xl rounded-full"></div>
+    </header>
+
+    <section id="about" class="py-24 md:py-40 bg-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-columns-2 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-gold text-sm font-bold uppercase tracking-widest mb-4">Our Philosophy</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">Tradition meets Technology.</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        Just as the Erbil Citadel has stood the test of time, we believe modern web platforms should be built on foundations of strength, durability, and intricate design. 
+                    </p>
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        At Qelat Web Craft, we don't just "build" websites; we weave them. Whether you are a historic restaurant in the bazaar or a rising construction giant, we translate your heritage into a digital language the world understands.
+                    </p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="p-8 rounded-2xl bg-navy border border-gold/10 group hover:border-terracotta transition-all duration-300">
+                        <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold mb-6 group-hover:bg-terracotta group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-7h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Construction Portfolios</h4>
+                        <p class="text-slate-500">Highlighting the scale and quality of your infrastructure projects with cinematic precision.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="p-8 rounded-2xl bg-navy border border-gold/10 group hover:border-terracotta transition-all duration-300">
+                        <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center text-gold mb-6 group-hover:bg-terracotta group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Modern Retail</h4>
+                        <p class="text-slate-500">Transforming local stores into global e-commerce powerhouses with seamless UI/UX.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="py-24 bg-navy overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-gold text-sm font-bold uppercase tracking-widest mb-4">Join the Craft</h2>
+                    <h3 class="text-4xl font-serif">Be part of the digital revolution in the Kurdistan Region.</h3>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-navy to-slate-900 border border-gold/20 p-8 md:p-12 rounded-[2rem] relative group">
+                <div class="absolute top-0 right-0 p-8">
+                    <span class="px-4 py-1 bg-terracotta/20 text-terracotta rounded-full text-xs font-bold uppercase">Open Role</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                    <div>
+                        <h4 class="text-3xl font-bold text-white mb-2">Senior Programmer</h4>
+                        <p class="text-gold font-medium mb-6">Full-Time • Erbil HQ</p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="bg-navy border border-white/10 px-4 py-1.5 rounded-lg text-sm">React/Next.js</span>
+                            <span class="bg-navy border border-white/10 px-4 py-1.5 rounded-lg text-sm">Tailwind CSS</span>
+                            <span class="bg-navy border border-white/10 px-4 py-1.5 rounded-lg text-sm">Node.js</span>
+                        </div>
+                        <ul class="space-y-4 text-slate-400 max-w-xl">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L9 10.586l3.293-3.293a1 1 0 011.414 1.414z"></path></svg>
+                                5+ years experience building scalable web applications.
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L9 10.586l3.293-3.293a1 1 0 011.414 1.414z"></path></svg>
+                                Deep understanding of system architecture and local market UX needs.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <button class="px-8 py-4 bg-gold text-navy font-bold rounded-xl btn-hover shadow-lg">Apply Now</button>
+                        <p class="text-xs text-center text-slate-500">Contact jobs@qelat.web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white text-navy rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-terracotta text-sm font-bold uppercase tracking-widest mb-4">Get in Touch</h2>
+                    <h3 class="text-5xl font-serif mb-8 leading-tight">Visit us in the heart of <span class="text-terracotta italic">Ankawa.</span></h3>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-navy/5 rounded-2xl flex items-center justify-center text-terracotta flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Our Studio</h4>
+                                <p class="text-slate-600 leading-relaxed">Near St. Joseph's Cathedral<br>Ankawa District, Erbil<br>Kurdistan Region, Iraq</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-navy/5 rounded-2xl flex items-center justify-center text-terracotta flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Contact Email</h4>
+                                <p class="text-slate-600 leading-relaxed">hello@qelat.web<br>projects@qelat.web</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy/5 p-1 rounded-[2rem] h-[400px] relative overflow-hidden group">
+                    <!-- Mock Map Placeholder with Branding -->
+                    <div class="absolute inset-0 bg-slate-200 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <div class="w-16 h-16 bg-terracotta text-white rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <h5 class="text-xl font-bold text-navy">Find us in Ankawa</h5>
+                            <p class="text-slate-500">2 mins from St. Joseph's Cathedral</p>
+                            <button class="mt-6 px-6 py-2 bg-navy text-white rounded-full text-sm font-bold uppercase tracking-widest">Open in Maps</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <div class="w-8 h-8 bg-gold rounded-lg flex items-center justify-center transform rotate-45 border border-terracotta">
+                            <span class="text-navy font-bold -rotate-45 text-sm">Q</span>
+                        </div>
+                        <span class="text-lg font-bold tracking-tighter text-white uppercase">Qelat Web Craft</span>
+                    </div>
+                    <p class="text-slate-500 max-w-sm leading-relaxed">
+                        Elevating the digital landscape of Hawler through heritage-driven design and cutting-edge performance.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6">Quick Links</h5>
+                    <ul class="space-y-4 text-slate-500">
+                        <li><a href="#" class="hover:text-gold transition-colors">Philosophy</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Career Path</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Client Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6">Connect</h5>
+                    <ul class="space-y-4 text-slate-500">
+                        <li><a href="#" class="hover:text-terracotta transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-terracotta transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-terracotta transition-colors">X / Twitter</a></li>
+                        <li><a href="#" class="hover:text-terracotta transition-colors">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium uppercase tracking-[0.2em] text-slate-600">
+                <p>&copy; 2024 Qelat Web Craft. Built in Erbil.</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-gold">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold">Legal Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="fixed bottom-8 left-8 right-8 md:left-auto md:right-8 md:w-[400px] bg-white text-navy p-6 rounded-2xl shadow-2xl z-[100] transform transition-transform duration-500 translate-y-[200%] border border-gold/20">
+        <div class="flex items-start space-x-4">
+            <div class="text-terracotta p-2 bg-terracotta/10 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div>
+                <h6 class="font-bold mb-1">Local Cookies</h6>
+                <p class="text-sm text-slate-600 mb-4 leading-snug">We use essential cookies to ensure our digital citadel functions correctly for all users in the region.</p>
+                <div class="flex space-x-4">
+                    <button onclick="closeCookieBanner()" class="bg-navy text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-terracotta transition-colors">Accept All</button>
+                    <button onclick="closeCookieBanner()" class="text-slate-400 px-4 py-2 text-xs font-bold uppercase tracking-widest hover:text-navy transition-colors">Necessary Only</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cookie Banner Animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const banner = document.getElementById('cookie-banner');
+                banner.classList.remove('translate-y-[200%]');
+            }, 2000);
+        });
+
+        function closeCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.add('translate-y-[200%]');
+        }
+
+        // Scroll Progress Header Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
